@@ -1,0 +1,12 @@
+wp-includes/*
+wp-admin/*
+wp-content/*
+!wp-content/plugins/
+
+wp-content/plugins/buddypress/
+wp-content/plugins/akismet/
+wp-content/plugins/lifterlms/
+wp-content/plugins/query-api/
+
+# ignore node dependency directories
+node_modules/
