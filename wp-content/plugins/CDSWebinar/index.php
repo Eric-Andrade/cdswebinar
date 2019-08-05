@@ -43,7 +43,7 @@ if ( !function_exists('add_action')) {
  add_action( 'admin_init', 'cdswebinar_admin_init' );
  add_action( 'save_post_cdswebinar', 'r_save_post_admin', 2, 3 ); // 2 = args, 3 = ?
  add_filter( 'the_content', 'r_filter_cdswebinar_content' ); // video #09 plugin
- add_action( 'wp_enqueue_scripts', 'r_admin_enqueue', 9999 ); // 9999 = delay
+ add_action( 'wp_enqueue_scripts', 'r_scripts_enqueue', 9999 ); // 9999 = delay
  add_action( 'wp_ajax_r_data_cdswebinar', 'r_data_cdswebinar' );
  add_action( 'wp_ajax_nopriv_r_data_cdswebinar', 'r_data_cdswebinar' );
  add_action( 'widgets_init', 'r_widgets_init' );
@@ -61,5 +61,4 @@ if ( !function_exists('add_action')) {
     //  add_action( 'get_cdswebinar', 'get_cdswebinar_student');
     //  add_action( 'save_cdswebinar', 'save_cdswebinar_student');
 
- // Shortcodes
-?>
+    // Shortcodes

@@ -10,5 +10,3 @@ function r_create_metaboxes() {
         'high' 
     );
 }
-
-?>

@@ -7,19 +7,18 @@ function r_filter_cdswebinar_content( $content ) {
     
     global $post, $wpdb;
     //* Data from DataBase
-    $cdswebinar_data            =   get_post_meta( $post->ID, 'cdswebinar_data', true );
-    $cdswebinar_tpl_res         =   wp_remote_get( plugins_url('process/cdswebinar-template.php', CDSWEBINAR_PLUGIN_URL) );
-    $cdswebinar_html            =   wp_remote_retrieve_body( $cdswebinar_tpl_res );
-    // $cdswebinar_html            =   file_get_contents( 'cdswebinar-template.php', true );
-    // $response                   =   wp_remote_get( 'http://itecordurango.com/subdominios/api_kityplancho/api/Clientes?ID=71' );
-    $cdswebinar_html            =   str_replace( 'MESSAGEUSER_PH', $cdswebinar_data['messageuser'], $cdswebinar_html);
-    $cdswebinar_html            =   str_replace( 'PRIVACITY_PH', $cdswebinar_data['passwordsettings'], $cdswebinar_html);
-    // $cdswebinar_html            =   str_replace( 'WEBINARLINK_PH', $cdswebinar_data['webinarlink'], $cdswebinar_html);
-    $cdswebinar_html            =   str_replace( 'STUDENTS_COUNTER_PH', 'Data from DataBase', $cdswebinar_html);
-    $cdswebinar_html            =   str_replace( 'DATE_PH', 'Data from DataBase', $cdswebinar_html);
-    $cdswebinar_html            =   str_replace( 'CHRONOMETER_PH', 'Data from DataBase', $cdswebinar_html);
-    $cdswebinar_html            =   str_replace( 'COST_PH', '299', $cdswebinar_html);
-    $cdswebinar_html            =   str_replace( 'IMG_PRESENTER', 'https://banner2.kisspng.com/20180517/uzq/kisspng-computer-icons-user-profile-male-avatar-5afd8d7b2682b3.7338522715265662671577.jpg', $cdswebinar_html);
+    $cdswebinar_data                =   get_post_meta( $post->ID, 'cdswebinar_data', true );
+    $cdswebinar_tpl_res             =   wp_remote_get( plugins_url('process/cdswebinar-template.php', CDSWEBINAR_PLUGIN_URL) );
+    $cdswebinar_html                =   wp_remote_retrieve_body( $cdswebinar_tpl_res );
+    // $cdswebinar_html                =   file_get_contents( 'cdswebinar-template.php', true );
+    // $response                       =   wp_remote_get( 'http://itecordurango.com/subdominios/api_kityplancho/api/Clientes?ID=71' );
+    $cdswebinar_html                =   str_replace( 'PRIVACITY_PH', $cdswebinar_data['passwordsettings'], $cdswebinar_html);
+    // $cdswebinar_html                =   str_replace( 'WEBINARLINK_PH', $cdswebinar_data['webinarlink'], $cdswebinar_html);
+    $cdswebinar_html                =   str_replace( 'STUDENTS_COUNTER_PH', 'Data from DataBase', $cdswebinar_html);
+    $cdswebinar_html                =   str_replace( 'DATE_PH', 'Data from DataBase', $cdswebinar_html);
+    $cdswebinar_html                =   str_replace( 'CHRONOMETER_PH', 'Data from DataBase', $cdswebinar_html);
+    $cdswebinar_html                =   str_replace( 'COST_PH', $cdswebinar_data['cost'], $cdswebinar_html);
+    $cdswebinar_html                =   str_replace( 'IMG_PRESENTER', 'https://banner2.kisspng.com/20180517/uzq/kisspng-computer-icons-user-profile-male-avatar-5afd8d7b2682b3.7338522715265662671577.jpg', $cdswebinar_html);
 
     //* Data from API REST WebinarJam
     if (getCDSWebinarData($cdswebinar_data['webinarlink'])) {

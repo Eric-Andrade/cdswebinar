@@ -19,7 +19,7 @@ function ju_latest_cdswebinar_display() {
         echo '<ul>';
             foreach($latest_webinars as $webinar) {
                 $title              =   get_the_title( $webinar->ID );
-                $permalink              =   get_the_permalink( $webinar->ID );
+                $permalink          =   get_the_permalink( $webinar->ID );
 
                 ?>
                 <li>

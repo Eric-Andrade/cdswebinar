@@ -26,7 +26,6 @@
 <div>
     <p>Horario(s): <strong>DATE_PH</strong></p> <!-- WebinarJAM -->
     <p>Tiempo para que inicie el webinar: <strong>CHRONOMETER_PH</strong></p> <!-- BBDD -->
-    <p>Este es el mensaje para el usuario: <strong>MESSAGEUSER_PH</strong></p> <!-- BBDD -->
 </div>
 
 <div>

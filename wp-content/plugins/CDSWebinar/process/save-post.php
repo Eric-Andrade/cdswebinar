@@ -13,7 +13,7 @@ function r_save_post_admin( $post_id, $post, $update) {
     $cdswebinar_data                                =   array();
     $cdswebinar_data['webinarlink']                 =   sanitize_text_field($_POST['r_webinarlink']);
     $cdswebinar_data['passwordsettings']            =   sanitize_text_field($_POST['r_passwordsettings']);
-    $cdswebinar_data['messageuser']                 =   sanitize_text_field($_POST['r_messageuser']);
+    $cdswebinar_data['cost']                 =   sanitize_text_field($_POST['r_cost']);
     // $cdswebinar_data['']                            =   sanitize_text_field($_POST['']);
     // $cdswebinar_data['']                            =   sanitize_text_field($_POST['']);
     $cdswebinar_data['rating']                      =   0;
