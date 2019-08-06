@@ -3,7 +3,7 @@
 function r_admin_enqueue() {
     global $typenow;
 
-    if( $typenow !== "cbswebinar") {
+    if( $typenow !== "cdswebinar" ) {
         return;
     }
     

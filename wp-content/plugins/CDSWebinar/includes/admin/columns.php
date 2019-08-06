@@ -22,7 +22,7 @@ function manage_cdswebinar_columns( $column_name, $id ) {
             break;
         case 'privacity':
             $cdswebinar_data        =   get_post_meta( $id, 'cdswebinar_data', true );
-            if ($cdswebinar_data['passwordsettings'] == 'randompassword' ||$cdswebinar_data['passwordsettings'] == 'custompassword') {
+            if ($cdswebinar_data['passwordsettings'] = 'randompassword' || $cdswebinar_data['passwordsettings'] = 'custompassword') {
                 echo 'Protected with password';
             } else {
                 echo 'Access free';

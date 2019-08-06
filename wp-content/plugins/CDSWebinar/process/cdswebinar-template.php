@@ -19,28 +19,26 @@
 
 <br/>
 <div>
-    <p class="datait" id="cdswebinar_ing">Alumnos registrados: <strong>STUDENTS_COUNTER_PH</strong></p> <!-- BBDD -->
+    <!-- <p class="datait" id="cdswebinar_ing">Alumnos registrados: <strong>STUDENTS_COUNTER_PH</strong></p> BBDD -->
 </div>
 
 <br/>
 <div>
     <p>Horario(s): <strong>DATE_PH</strong></p> <!-- WebinarJAM -->
-    <p>Tiempo para que inicie el webinar: <strong>CHRONOMETER_PH</strong></p> <!-- BBDD -->
+    <!-- <p>Tiempo para que inicie el webinar: <strong>CHRONOMETER_PH</strong></p> BBDD -->
 </div>
 
 <div>
     <p>Privacidad del Webinar: <strong>PRIVACITY_PH</strong></p> <!-- WebinarJAM -->
-    <!-- <span><?php 
-        PRIVACITY_PH === "randompassword" ? "You need to pay for it first." : "ewe" //! pendiente: ewe
-        ?></span> -->
 </div>
-<div>
-    <h5>Pre-requisitos: </h5> <!-- BBDD -->
+
+<!-- <div>  <!-- BBDD 
+    <h5>Pre-requisitos: </h5>
     <ul class="list-unstyled">
         <li><strong></strong></li>
         <li><strong></strong></li>
     </ul>
-</div>
+</div> -->
 <div>BUTTON_CDSWEBINAR_PH</div>
 
 <br/>

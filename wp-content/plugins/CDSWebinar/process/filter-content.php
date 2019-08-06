@@ -12,10 +12,15 @@ function r_filter_cdswebinar_content( $content ) {
     $cdswebinar_html                =   wp_remote_retrieve_body( $cdswebinar_tpl_res );
     // $cdswebinar_html                =   file_get_contents( 'cdswebinar-template.php', true );
     // $response                       =   wp_remote_get( 'http://itecordurango.com/subdominios/api_kityplancho/api/Clientes?ID=71' );
-    $cdswebinar_html                =   str_replace( 'PRIVACITY_PH', $cdswebinar_data['passwordsettings'], $cdswebinar_html);
+    // $cdswebinar_html                =   str_replace( 'PRIVACITY_PH', $cdswebinar_data['passwordsettings'], $cdswebinar_html);
+    if ($cdswebinar_data['passwordsettings'] !== 'unpasswored') {
+        $cdswebinar_html            =   str_replace( 'PRIVACITY_PH', 'You need to pay for it first.', $cdswebinar_html);
+    } else {
+        $cdswebinar_html            =   str_replace( 'PRIVACITY_PH', 'Free access', $cdswebinar_html);
+    }
     // $cdswebinar_html                =   str_replace( 'WEBINARLINK_PH', $cdswebinar_data['webinarlink'], $cdswebinar_html);
     $cdswebinar_html                =   str_replace( 'STUDENTS_COUNTER_PH', 'Data from DataBase', $cdswebinar_html);
-    $cdswebinar_html                =   str_replace( 'DATE_PH', 'Data from DataBase', $cdswebinar_html);
+    $cdswebinar_html                =   str_replace( 'DATE_PH', 'Data from WebinarJam', $cdswebinar_html);
     $cdswebinar_html                =   str_replace( 'CHRONOMETER_PH', 'Data from DataBase', $cdswebinar_html);
     $cdswebinar_html                =   str_replace( 'COST_PH', $cdswebinar_data['cost'], $cdswebinar_html);
     $cdswebinar_html                =   str_replace( 'IMG_PRESENTER', 'https://banner2.kisspng.com/20180517/uzq/kisspng-computer-icons-user-profile-male-avatar-5afd8d7b2682b3.7338522715265662671577.jpg', $cdswebinar_html);

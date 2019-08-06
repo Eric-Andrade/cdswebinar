@@ -7,6 +7,6 @@ function r_create_metaboxes() {
         'r_cdswebinar_options_mb',
         'cdswebinar',
         'normal',
-        'high' 
+        'default' 
     );
 }
