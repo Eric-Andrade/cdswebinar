@@ -1,0 +1,17 @@
+Links: [
+    Tutorial: https://www.youtube.com/watch?v=NqL4l75Bz7o&list=PLm2QQvZL1PN8amhPCCLWGfDF7bX7y9teY&index=1
+    metabox: https://www.dariobf.com/metabox-wordpress/
+    wp_remote_get: https://code.tutsplus.com/tutorials/a-look-at-the-wordpress-http-api-a-practical-example-of-wp_remote_get--wp-32109
+    enqueue: https://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts
+]
+
+Usuario: Eric
+Pass: root
+
+Usuario: admin
+Pass: %bPFQ124XpC*OgY^C4
+
+@ini_set('upload_max_size', '256M');
+@ini_set('post_max_size', '256M');
+@ini_set('max_execution_time', '400');
+

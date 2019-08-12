@@ -41,7 +41,7 @@ if ( !function_exists('add_action')) {
  register_deactivation_hook(  __FILE__, 'r_deactivate_plugin' );
  add_action( 'init', 'cdswebinar_init' );
  add_action( 'admin_init', 'cdswebinar_admin_init' );
- add_action( 'save_post_cdswebinar', 'r_save_post_admin', 2, 10 ); // 2 = priority, 10 = args
+ add_action( 'save_post_cdswebinar', 'r_save_post_admin', 10, 10 ); // 10 = priority, 10 = args
  add_filter( 'the_content', 'r_filter_cdswebinar_content', 100 ); // video #09 plugin
  add_action( 'wp_enqueue_scripts', 'r_scripts_enqueue', 9999 ); // 9999 = delay
  add_action( 'wp_ajax_r_data_cdswebinar', 'r_data_cdswebinar' );

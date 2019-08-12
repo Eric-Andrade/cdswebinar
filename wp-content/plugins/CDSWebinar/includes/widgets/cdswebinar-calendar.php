@@ -29,15 +29,22 @@ class R_Cdswebinar_Calendar_Widget extends WP_Widget {
         $title         	 	=   apply_filters( 'widget_title', $title );
         echo $before_widget;
         echo $before_title . $title . $after_title;
-		$cdswebinar_id		=   get_transient('r_d_cdswebinar');
-		
-		// echo '<script>';
-		// echo 'console.log('. json_encode( $cdswebinar_id ) .')';
-		// echo '</script>';
-        ?>
-        <a href="<?php echo get_permalink($cdswebinar_id);?>" class="url"><?php echo get_the_title( $cdswebinar_id ); ?></a>
-        <?php
-
+		$cdswebinar_id		=   get_transient( 'r_daily_cdswebinar' );
+		if($cdswebinar_id) {
+			echo '<ul>';
+				foreach($cdswebinar_id as $item) {
+					$cdswebinar_title	=	get_the_title($item->ID);
+					$cdswebinar_link	=	get_the_permalink($item->ID);
+					?>
+				<li>
+					<a href="<?php echo $cdswebinar_link; ?>" class="url"><?php echo $cdswebinar_title; ?></a>
+				</li>
+					<?php
+				}
+			echo '</ul>';
+		} else {
+			echo '<p><strong>Sin webinars por el momento</strong></p>';
+		}
         echo $after_widget;
 	}
 
@@ -48,7 +55,7 @@ class R_Cdswebinar_Calendar_Widget extends WP_Widget {
 	 */
 	public function form( $instance ) {
         // outputs the options form on admin
-        $default            = array( 'title' => 'Next webinars');
+        $default            = array( 'title' => 'Next 5 webinars');
         $instance           = wp_parse_args( (array) $instance, $default );
 
         ?>

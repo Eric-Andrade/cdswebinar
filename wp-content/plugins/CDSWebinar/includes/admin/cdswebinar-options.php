@@ -7,19 +7,20 @@
             $cdswebinar_data             = array(
                 'passwordsettings'      =>  'randompassword',
                 'cost'                  =>   200,
-                'webinarlink'           =>  'https://www.webinarjam.com/ewesoyunwebinar'
+                'webinarlink'           =>  'http://itecordurango.com/subdominios/api_kityplancho/api/Clientes?ID=71',
+                'webinarpassword'     =>  'ewe'
             );
         }
-
-        ?>
+       ?>
         <!-- <h3>Password settings</h3> -->
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class='form-group'>
                         <label>Webinar link</label>
-                        <input class='form-control' type='url' name='r_webinarlink' required value="<?php echo isset($cdswebinar_data['webinarlink']) ? stripslashes_deep($cdswebinar_data['webinarlink']) : ''; ?>"/>
+                        <input class='form-control' type='url' name='r_webinarlink' required autocomplete="off" value="<?php echo isset($cdswebinar_data['webinarlink']) ? stripslashes_deep($cdswebinar_data['webinarlink']) : ''; ?>"/>
                     </div>
+                    <button type="button" class="btn btn-primary" onclick="ewe()">Search</button>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                     <div class='form-group'>
@@ -32,15 +33,37 @@
                     </div>
                     <div class='form-group'>
                         <label>Webinar cost</label>
-                        <input class='form-control' type='text' name='r_cost' required pattern='[0-9]{1,5}' value="<?php echo isset($cdswebinar_data['cost']) ? stripslashes_deep($cdswebinar_data['cost']) : ''; ?>"/>
+                        <input class='form-control' type='text' name='r_cost' required autocomplete="off" pattern='[0-9]{1,5}' value="<?php echo isset($cdswebinar_data['cost']) ? stripslashes_deep($cdswebinar_data['cost']) : ''; ?>"/>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                     <div class='form-group'>
                         <label>Webinar password</label>
-                        <input class='form-control' type='text' name='r_webinarpassword' required value="password we"/>
+                        <input class='form-control ewe' type='text' name='r_webinarpassword' id='r_webinarpassword' required autocomplete="off" value="<?php echo isset($cdswebinar_data['webinarpassword']) ? stripslashes_deep($cdswebinar_data['webinarpassword']) : ''; ?>"/>
                     </div>
                 </div>
+                <?php
+                echo "<script type='text/javascript'>";
+                    echo "function inputAvailable()";
+                    echo "{";
+                        echo "if('" . $cdswebinar_data['passwordsettings']. "' === 'unpasswored'){";
+                            echo "$('#r_webinarpassword').attr('readonly', 'readonly');"; // si no tiene contreaseña lo bloqueas
+                            // echo "return this;";
+                            echo "}";
+                        echo "else {";
+                            echo "$('#r_webinarpassword').removeAttr('readonly');";
+                            // echo "return this;";
+                            echo "}";
+                            // echo "return this;";
+                    echo "}";
+                    echo "window.inputAvailable();";
+                    echo "function ewe() {";                        
+                        echo "console.log('=================');";
+                        echo "console.log('ewe9');";
+                        echo "console.log('=================');";
+                    echo "}";
+                echo "</script>";
+                ?>
             </div>
         </div>
         <?php
