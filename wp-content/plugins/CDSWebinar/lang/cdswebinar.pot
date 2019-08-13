@@ -1,0 +1,128 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: CDS Webinar\n"
+"POT-Creation-Date: 2019-08-13 12:59-0500\n"
+"PO-Revision-Date: 2019-08-13 12:59-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: index.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/activate.php:4
+msgid "You must update WordPress version to use this plugin"
+msgstr ""
+
+#: includes/admin/columns.php:5
+msgid "Title"
+msgstr ""
+
+#: includes/admin/columns.php:6
+msgid "Author"
+msgstr ""
+
+#: includes/admin/columns.php:7
+msgid "Categories"
+msgstr ""
+
+#: includes/admin/columns.php:8
+msgid "Students subscribed"
+msgstr ""
+
+#: includes/admin/columns.php:9
+msgid "Privacity"
+msgstr ""
+
+#: includes/admin/columns.php:10
+msgid "Webinar date"
+msgstr ""
+
+#: includes/admin/columns.php:11
+msgid "Date"
+msgstr ""
+
+#: includes/admin/create_metaboxes.php:6
+msgid "Cdswebinar Options"
+msgstr ""
+
+#: includes/init.php:5 includes/init.php:7
+msgid "Cdswebinars"
+msgstr ""
+
+#: includes/init.php:6 includes/init.php:8
+msgid "Cdswebinar"
+msgstr ""
+
+#: includes/init.php:9
+msgid "Add New"
+msgstr ""
+
+#: includes/init.php:10
+msgid "Add New Cdswebinar"
+msgstr ""
+
+#: includes/init.php:11
+msgid "New Cdswebinar"
+msgstr ""
+
+#: includes/init.php:12
+msgid "Edit Cdswebinar"
+msgstr ""
+
+#: includes/init.php:13
+msgid "View Cdswebinar"
+msgstr ""
+
+#: includes/init.php:14
+msgid "All Cdswebinars"
+msgstr ""
+
+#: includes/init.php:15
+msgid "Search Cdswebinars"
+msgstr ""
+
+#: includes/init.php:16
+msgid "Parent Cdswebinars:"
+msgstr ""
+
+#: includes/init.php:17
+msgid "No Cdswebinars found."
+msgstr ""
+
+#: includes/init.php:18
+msgid "No Cdswebinars found in Trash."
+msgstr ""
+
+#: includes/init.php:23
+msgid "A custom post type for cdswebinars."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "CDS Webinar"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Special WordPress plugin to manage data between Clave de Sol & WebinarJam "
+"API. It allows see info about webinars created in WebinarJam.com"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Itecor Durango"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://itecordurango.com/WebPages/WelcomeItecor-es.aspx"
+msgstr ""

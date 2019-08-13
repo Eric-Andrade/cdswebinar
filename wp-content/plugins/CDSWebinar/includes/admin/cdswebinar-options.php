@@ -25,7 +25,7 @@
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                     <div class='form-group'>
                         <label>Webinar access</label>
-                        <select class='form-control' name='r_passwordsettings'>
+                        <select class='form-control' name='r_passwordsettings' id='r_passwordsettings' onchange='inputAvailable()'>
                             <option value='unpasswored'>No password</option>
                             <option value='randompassword' <?php echo $cdswebinar_data['passwordsettings'] == 'randompassword' ? 'SELECTED' : ''; ?>>Random password</option>
                             <option value='custompassword' <?php echo $cdswebinar_data['passwordsettings'] == 'custompassword' ? 'SELECTED' : ''; ?>>Custom password</option>
@@ -39,19 +39,23 @@
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                     <div class='form-group'>
                         <label>Webinar password</label>
-                        <input class='form-control ewe' type='text' name='r_webinarpassword' id='r_webinarpassword' required autocomplete="off" value="<?php echo isset($cdswebinar_data['webinarpassword']) ? stripslashes_deep($cdswebinar_data['webinarpassword']) : ''; ?>"/>
+                        <input class='form-control ewe' type='text' name='r_webinarpassword' id='r_webinarpassword' autocomplete="off" value="<?php echo isset($cdswebinar_data['webinarpassword']) ? stripslashes_deep($cdswebinar_data['webinarpassword']) : ''; ?>"/>
                     </div>
                 </div>
                 <?php
                 echo "<script type='text/javascript'>";
                     echo "function inputAvailable()";
                     echo "{";
-                        echo "if('" . $cdswebinar_data['passwordsettings']. "' === 'unpasswored'){";
+                        echo "var x = document.getElementById('r_passwordsettings').value;";
+                        echo "if(x === 'unpasswored'){";
                             echo "$('#r_webinarpassword').attr('readonly', 'readonly');"; // si no tiene contreaseña lo bloqueas
+                            echo "$('#r_webinarpassword').removeAttr('required');";
+                            echo "document.getElementById('r_webinarpassword').value = ''"; // vacia el campo de password si select es igual a unpasswored, para que guarde vacio en BBDD
                             // echo "return this;";
                             echo "}";
                         echo "else {";
                             echo "$('#r_webinarpassword').removeAttr('readonly');";
+                            echo "$('#r_webinarpassword').attr('required', 'required');"; // si no tiene contreaseña lo bloqueas
                             // echo "return this;";
                             echo "}";
                             // echo "return this;";

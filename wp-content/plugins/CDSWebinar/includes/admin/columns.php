@@ -5,7 +5,7 @@ function add_new_cdswebinar_columns( $columns ) {
     $new_columns['title']           = __('Title', 'cdswebinar');
     $new_columns['author']          = __('Author', 'cdswebinar');
     $new_columns['categories']      = __('Categories', 'cdswebinar'); 
-    $new_columns['count']           = __('Students suscribed', 'cdswebinar');
+    $new_columns['count']           = __('Students subscribed', 'cdswebinar');
     $new_columns['privacity']       = __('Privacity', 'cdswebinar');
     $new_columns['webinardate']     = __('Webinar date', 'cdswebinar');
     $new_columns['date']            = __('Date', 'cdswebinar');

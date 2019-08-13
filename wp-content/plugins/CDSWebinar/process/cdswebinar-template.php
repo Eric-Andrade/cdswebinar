@@ -5,8 +5,8 @@
 ?>
 
 <div>
-    <p>Descripción: <strong>DESCRIPTION_PH</strong></p> <!-- WebinarJAM -->
-    <p>Costo: <strong>COST_PH</strong></p> <!-- WebinarJAM -->
+    <p>DESCRIPTION_I18N: <strong>DESCRIPTION_PH</strong></p> <!-- WebinarJAM -->
+    <p>COST_I18N: <strong>COST_PH</strong></p> <!-- WebinarJAM -->
 </div>
 
 <br/>

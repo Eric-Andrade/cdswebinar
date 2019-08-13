@@ -12,6 +12,7 @@
         $createSQL      =   "
         CREATE TABLE IF NOT EXISTS `" . $wpdb->prefix . "cdswebinar_data` (
             `id_cdswebinar_data` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+            `post_id` bigint(20) UNSIGNED NOT NULL,
             `cdswebinar_url` varchar(250) NOT NULL,
             `cdswebinar_description` varchar(500) NULL,
             `cdswebinar_cost` tinyint(10),
@@ -23,7 +24,8 @@
             `presenter_mail` varchar(250) NOT NULL,
             `students_suscripted` tinyint(10) NOT NULL,
             `user_ip` varchar(32) NOT NULL,
-            PRIMARY KEY (`id`)
+            PRIMARY KEY (`id_cdswebinar_data`),
+            KEY `post_id` (`post_id`)
           ) ENGINE=InnoDB " . $wpdb->get_charset_collate() . " AUTO_INCREMENT=1 ;
         ";
     

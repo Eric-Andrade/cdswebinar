@@ -31,6 +31,7 @@ if ( !function_exists('add_action')) {
  include( dirname(CDSWEBINAR_PLUGIN_URL) . '/includes/widgets/cdswebinar-calendar.php' ); 
  include( 'includes/cron.php' );
  include( 'includes/admin/dashboard-widgets.php' );
+ include( 'includes/textdomain.php' );
 // my code
     include( 'process/get-cdswebinar.php' );
     // include( 'process/get-cdswebinars.php' );
@@ -49,6 +50,7 @@ if ( !function_exists('add_action')) {
  add_action( 'widgets_init', 'r_widgets_init' );
  add_action( 'r_cdswebinar_calendar_hook', 'r_generate_cdswebinar_calendar' );
  add_action( 'wp_dashboard_setup', 'ju_add_dashboard_widgets' );
+ add_action( 'plugins_loaded', 'ju_load_textdomain' );
 //  add_action( 'admin_enqueue_scripts', 'r_admin_enqueue');
 // my code
     // Admin

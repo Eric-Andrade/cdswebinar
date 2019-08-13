@@ -32,12 +32,15 @@ function r_filter_cdswebinar_content( $content ) {
         $cdswebinar_html            =   str_replace( 'TEACHER_EMAIL_PH', getCDSWebinarData($cdswebinar_data['webinarlink'])->CEMAIL, $cdswebinar_html);
         $cdswebinar_html            =   str_replace( 'BUTTON_CDSWEBINAR_PH', '<div class="form-group"><a class="btn btn-default" href="'. $cdswebinar_data['webinarlink'] .'" role="button" target="_blank">Ir al webinar</a></div>', $cdswebinar_html);
     } else {
-        
         $cdswebinar_html            =   str_replace( 'DESCRIPTION_PH', 'Data from WebinarJam', $cdswebinar_html);
         $cdswebinar_html            =   str_replace( 'TEACHER_NAME_PH', 'Sin datos', $cdswebinar_html); //! contenido de botón pendiente
         $cdswebinar_html            =   str_replace( 'TEACHER_EMAIL_PH', 'Sin datos', $cdswebinar_html); //! contenido de botón pendiente
         $cdswebinar_html            =   str_replace( 'BUTTON_CDSWEBINAR_PH', '<div class="form-group"><a class="btn btn-default" href="'. $cdswebinar_data['webinarlink'] .'" role="button" target="_blank">Inscribirse</a></div>', $cdswebinar_html); //! contenido de botón pendiente
     }
+
+    // Traslations
+    $cdswebinar_html                =   str_replace( 'DESCRIPTION_I18N', __( 'Description', 'cdswebinar' ), $cdswebinar_html);
+    $cdswebinar_html                =   str_replace( 'COST_I18N', __( 'Cost', 'cdswebinar' ), $cdswebinar_html);
 
     return $cdswebinar_html . $content;
 }
