@@ -8,5 +8,6 @@ wp-content/plugins/akismet/
 wp-content/plugins/lifterlms/
 wp-content/plugins/query-api/
 wp-content/plugins/CDSWebinar.zip
+wp-content/plugins/the-events-calendar
 # ignore node dependency directories
 node_modules/

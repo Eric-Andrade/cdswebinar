@@ -1,21 +1,33 @@
 <?php
 
-function r_scripts_enqueue() {
+function r_enqueue_scripts() {
     global $typenow;
 
-    if( $typenow !== "cdswebinar") {
+    if( $typenow !== "cdswebinar" ) {
         return;
     }
     
 // registers
-    wp_register( 'r_main', plugins_url( '/assets/scripts/main.js', CDSWEBINAR_PLUGIN_URL ), array(), '1.0.0', true );
-    wp_localize_script( 'r_main', 'cdswebinar_obj', array(
-        "array_url"             =>          admin_url( "admin-ajax.php" )
-    ));
+
+    // wp_register_style( 'front_bootstrap', plugins_url('../../assets/styles/bootstrap.css' ));
+    // wp_register_style( 'f_bootstrap', get_stylesheet_directory_uri() . '/assets/')
+    // wp_register_script( 'r_main', plugins_url( '/assets/scripts/main.js', CDSWEBINAR_PLUGIN_URL ), array(), '1.0.0', false );
+    // wp_localize_script( 'r_main', 'cdswebinar_obj', array(
+    //     "array_url"             =>          admin_url( "admin-ajax.php" )
+    // ));
 
 // enqueues
-    wp_enqueue_script( 'r_main' );
+    // wp_enqueue_script( 'r_main' );
+    // wp_enqueue_style( 'front_bootstrap' );
 
+    echo "<script>";
+        echo "function ewe() {";                        
+            echo "console.log('=================');";
+            echo "console.log('ewe9');";
+            echo "console.log('=================');";
+        echo "}";
+        echo "window.ewe();";
+    echo "</script>";
 
     // video #09 themes: uploading a logo
     // if (!isset($_GET['page']) || $_GET['page'] != "ju_theme_opts") {

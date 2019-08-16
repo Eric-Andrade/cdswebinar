@@ -49,14 +49,19 @@
                         echo "var x = document.getElementById('r_passwordsettings').value;";
                         echo "if(x === 'unpasswored'){";
                             echo "$('#r_webinarpassword').attr('readonly', 'readonly');"; // si no tiene contreaseña lo bloqueas
-                            echo "$('#r_webinarpassword').removeAttr('required');";
+                            echo "$('#r_webinarpassword').removeAttr('required');"; // Deshace la obligación del campo.
                             echo "document.getElementById('r_webinarpassword').value = ''"; // vacia el campo de password si select es igual a unpasswored, para que guarde vacio en BBDD
                             // echo "return this;";
                             echo "}";
-                        echo "else {";
-                            echo "$('#r_webinarpassword').removeAttr('readonly');";
+                        echo "else if(x === 'randompassword'){";
+                            echo "$('#r_webinarpassword').removeAttr('readonly');"; // Hace assesible la edición del campo
                             echo "$('#r_webinarpassword').attr('required', 'required');"; // si no tiene contreaseña lo bloqueas
-                            // echo "return this;";
+                            echo "document.getElementById('r_webinarpassword').value = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);";
+                        echo "}";
+                        echo "else {";
+                            echo "$('#r_webinarpassword').removeAttr('readonly');"; // Hace assesible la edición del campo
+                            echo "$('#r_webinarpassword').attr('required', 'required');"; // si no tiene contreaseña lo bloqueas
+                            echo "document.getElementById('r_webinarpassword').value = ''"; // vacia el campo de password si select es igual a unpasswored, para que guarde vacio en BBDD
                             echo "}";
                             // echo "return this;";
                     echo "}";

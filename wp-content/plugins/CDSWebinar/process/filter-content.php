@@ -39,8 +39,10 @@ function r_filter_cdswebinar_content( $content ) {
     }
 
     // Traslations
-    $cdswebinar_html                =   str_replace( 'DESCRIPTION_I18N', __( 'Description', 'cdswebinar' ), $cdswebinar_html);
-    $cdswebinar_html                =   str_replace( 'COST_I18N', __( 'Cost', 'cdswebinar' ), $cdswebinar_html);
+    $cdswebinar_html                =   str_replace( 'DESCRIPTION_I18N', __( 'Description', 'cdswebinar' ), $cdswebinar_html );
+    $cdswebinar_html                =   str_replace( 'COST_I18N', __( 'Cost', 'cdswebinar' ), $cdswebinar_html );
+    $cdswebinar_html                =   str_replace( 'COST_I18N', __( 'Cost', 'cdswebinar' ), $cdswebinar_html );
+
 
     return $cdswebinar_html . $content;
 }

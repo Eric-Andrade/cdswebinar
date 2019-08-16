@@ -31,17 +31,30 @@ class R_Cdswebinar_Calendar_Widget extends WP_Widget {
         echo $before_title . $title . $after_title;
 		$cdswebinar_id		=   get_transient( 'r_daily_cdswebinar' );
 		if($cdswebinar_id) {
-			echo '<ul>';
-				foreach($cdswebinar_id as $item) {
-					$cdswebinar_title	=	get_the_title($item->ID);
-					$cdswebinar_link	=	get_the_permalink($item->ID);
-					?>
-				<li>
-					<a href="<?php echo $cdswebinar_link; ?>" class="url"><?php echo $cdswebinar_title; ?></a>
-				</li>
-					<?php
-				}
-			echo '</ul>';
+			echo '<div class="container">';
+			foreach($cdswebinar_id as $item) {
+				$cdswebinar_title	=	get_the_title($item->ID);
+				$cdswebinar_link	=	get_the_permalink($item->ID);
+				$cdswebinar_date	=	get_the_date($d = '', $item->ID);
+				$cdswebinar_time	=	get_the_date($d = 'H:i', $item->ID);
+				?>
+				<!-- <div class="col-xs-3">
+					<p class="display-4"><span class="badge badge-secondary">23</span></p>
+					<p>OCT</p>
+				</div> -->
+				<div class="col-xs-9">
+					<p class="text-uppercase"><strong><a href="<?php echo $cdswebinar_link; ?>" class="url"><?php echo $cdswebinar_title; ?></a></strong></p>
+					<ul class="list-inline">
+						<li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i> <?php echo $cdswebinar_date;?></li>
+						<li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $cdswebinar_time;?></li>
+						<!-- <li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> 12:30 PM - 2:00 PM</li> -->
+						<!-- <li class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> Cafe</li> -->
+					</ul>
+					<!-- <p>Lorem ipsum dolsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+				</div>
+				<?php
+			}
+			echo '</div>';
 		} else {
 			echo '<p><strong>Sin webinars por el momento</strong></p>';
 		}
